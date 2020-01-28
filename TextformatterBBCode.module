@@ -1,4 +1,4 @@
-<?php
+<?php namespace ProcessWire;
 
 /**
  * ProcessWire BBCode Textformatter
@@ -20,19 +20,26 @@ class TextformatterBBCode extends Textformatter {
 	public static function getModuleInfo() {
 		return array(
 			'title' => 'BBCode (NBBC)', 
-			'version' => 145, 
+			'version' => 146, 
 			'summary' => "BBCode Text Formatter using the NBBC Parser.", 
 			'url' => 'http://nbbc.sourceforge.net/',
 		); 
 	}
 
 	public function format(&$str) {
+
 		$path = $this->config->paths->TextformatterBBCode; 
 		$url = $this->config->urls->TextformatterBBCode; 
-		require_once($path . 'nbbc.php'); 
-		$bbcode = new BBCode();
+
+		require_once($path . 'nbbc/PackageLoader.php');
+		$loader = new \PackageLoader\PackageLoader();
+		$loader->load(__DIR__."/nbbc");
+		$bbcode = new \Nbbc\BBCode();
 		$bbcode->setSmileyDir($path . 'smileys'); 
 		$bbcode->setSmileyURL($url . 'smileys'); 
-		$str = $bbcode->Parse($str); 	
+		$str = $bbcode->Parse($str); 
+
 	}
+
+
 }
