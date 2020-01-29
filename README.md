@@ -1,4 +1,4 @@
-#ProcessWire BBCode Textformatter
+# ProcessWire BBCode Textformatter
 
 BBCode Text Formatter using the Vanilla maintained version of the NBBC Parser (https://github.com/vanilla/nbbc).
 
