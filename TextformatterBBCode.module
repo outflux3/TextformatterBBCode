@@ -3,10 +3,11 @@
 /**
  * ProcessWire BBCode Textformatter
  *
- * Uses the NBBC library from http://nbbc.sourceforge.net
- * NBBC Copyright (C) 2008-10, the Phantom Inker. All rights reserved.
- *
- * ProcessWire 2.x 
+ * Uses the NBBC library from https://github.com/vanilla/nbbc
+ * Copyright © 2008-10, Sean Werkema. All rights reserved.
+ * Portions copyright © Vanilla Forums Inc. All rights reserved.
+ * 
+ * ProcessWire 3.x 
  * Copyright (C) 2012 by Ryan Cramer 
  * Licensed under GNU/GPL v2, see LICENSE.TXT
  * 
